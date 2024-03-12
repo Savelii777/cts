@@ -30,7 +30,6 @@ use App\Http\Controllers\Auth\RegisterController;
 |
 */
 // Guest
-Route::middleware(['https'])->group(function () {
 
     Route::get('/', [ChapterController::class, 'viewChapterCount'])->name('home.page');
 
@@ -158,4 +157,4 @@ Route::middleware(['https'])->group(function () {
             Route::resource('users', ApiUserController::class);
         });
     });
-});
+
