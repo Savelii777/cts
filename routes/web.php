@@ -157,4 +157,3 @@ use App\Http\Controllers\Auth\RegisterController;
             Route::resource('users', ApiUserController::class);
         });
     });
-
