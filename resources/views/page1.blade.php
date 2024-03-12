@@ -21,7 +21,7 @@
                 <th style="text-align: center; border:1px solid #6b7fe3">
                     #
                 </th>
-                <th style="text-align: center; border:1px solid #6b7fe3;min-width:948px;max-width:950px">
+                <th style="text-align: center; border:1px solid #6b7fe3;width: 70%; ">
                    Название
                 </th>
                 <th style="text-align: center; border:1px solid #6b7fe3">
@@ -46,7 +46,7 @@
                     <td style=" border:1px solid #6b7fe3">
                         {{ $loop->iteration }}
                     </td>
-                    <td style="min-width:948px;  border:1px solid #6b7fe3; max-width:950px">
+                    <td style="width: 70%;  border:1px solid #6b7fe3;">
                         {{ $item->name }}
                     </td>
                     <td style="max-width: 200px; border: 1px solid #6b7fe3">

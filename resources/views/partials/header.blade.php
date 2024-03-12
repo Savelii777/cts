@@ -4,29 +4,29 @@
 </a>
     @auth
 
-    <ul class="menu-nav" style=" position:absolute; top:10px; left:200px; margin-top:0; display: flex; justify-content: space-between; min-width: 1600px">
-        <li><a class="menu-nav-link" style="background:#6b7fe3; width:max-content; color: #fff"  href="{{ url('/') }}">
-            <div style="background:#6b7fe3; color:#fff; z-index: 1; font-size: 20px; padding: 10px">На главную</div>
+    <ul class="menu-nav" style=" position:absolute; top:10px; left:200px; margin-top:0; display: flex; justify-content: space-between; width: 80%; font-family: sans-serif">
+        <li class="menu-nav-li"><a class="menu-nav-link" style="background:#6b7fe3; width:200px; color: #fff"  href="{{ url('/') }}">
+            <div class="menu-nav-link__text"  style="background:#6b7fe3; color:#fff; z-index: 1; font-size: 20px; padding: 10px; text-align: center; width: 100%">На главную</div>
           </a></li>
-        <li><a class="menu-nav-link" style="background:#6b7fe3" href="{{ route('login') }}">
-            <div style="background:#6b7fe3; color:#fff; z-index: 1; font-size: 20px; padding: 10px">Личный кабинет</div>
+        <li class="menu-nav-li"><a class="menu-nav-link" style="background:#6b7fe3; width:200px;" href="{{ route('login') }}">
+            <div class="menu-nav-link__text"  style="background:#6b7fe3; color:#fff; z-index: 1; font-size: 20px; padding: 10px; text-align: center; width: 100%">Личный кабинет</div>
           </a></li>
 
-        <li><a class="menu-nav-link" style="background:#6b7fe3" href="{{ route('logout') }}"  onclick="event.preventDefault(); document.getElementById('logout-form').submit(); localStorage.clear();">
-               <div style="background:#6b7fe3; color:#fff; z-index: 1; font-size: 20px; padding: 10px">
-                   Выход из личного кабинета
+        <li class="menu-nav-li"><a class="menu-nav-link" style="background:#6b7fe3; width:200px;" href="{{ route('logout') }}"  onclick="event.preventDefault(); document.getElementById('logout-form').submit(); localStorage.clear();">
+               <div class="menu-nav-link__text" style="background:#6b7fe3; color:#fff; z-index: 1; font-size: 20px;width: 100%; text-align: center; padding: 10px">
+                   Выход
                </div>
             </a>
             <form id="logout-form" action="{{ route('logout') }}" method="POST">
                 @csrf
             </form>
         </li>
-        <li>
+        <li class="menu-nav-li">
             @auth
                 @if(auth()->user()->hasRole('admin'))
-                    <a class="menu-nav-link" style="background:#6b7fe3" href="/admin">
+                    <a class="menu-nav-link" style="background:#6b7fe3; width: 200px" href="/admin">
 
-                            <div style="background:#6b7fe3; color:#fff; z-index: 1; font-size: 20px; padding: 10px">Панель администратора</div>
+                            <div class="menu-nav-link__text"  style="background:#6b7fe3; color:#fff; z-index: 1; font-size: 20px; padding: 10px; text-align: center; width: 100%">Админка</div>
 
                     </a>
                 @endif
