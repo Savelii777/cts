@@ -33,10 +33,8 @@
                 <th style="text-align: center; border:1px solid #6b7fe3">
                     Наличие
                 </th>
-                <th style="text-align: center; border:1px solid #6b7fe3; min-width:300px">
+                <th style="text-align: center; border:1px solid #6b7fe3;">
 
-                </th>
-                <th>
                 </th>
             </tr>
             </thead>
