@@ -44,10 +44,10 @@
                     <td style=" border:1px solid #6b7fe3">
                         {{ $loop->iteration }}
                     </td>
-                    <td style="width: 60%;  border:1px solid #6b7fe3;">
+                    <td style="min-width: 650px; border:1px solid #6b7fe3;">
                         {{ $item->name }}
                     </td>
-                    <td style="max-width: 200px; border: 1px solid #6b7fe3">
+                    <td style="min-width:200px; border: 1px solid #6b7fe3">
                     <details>
     <summary style="display:flex; flex-direction:row">
       <div class="button-popup">
@@ -106,7 +106,7 @@
 {{--@endguest--}}
 
                     @if(Auth::check() && Auth::user()->hasRole('dealer'))
-                        <td style="border: 1px solid #6b7fe3; min-width:100px">
+                        <td style="border: 1px solid #6b7fe3; min-width:150px">
                             <form style="max-height: 30px; min-width: 100px; display:flex; flex-direction: row">
             <span class="input-number">
                 <input id="amount{{$loop->iteration}}" ENGINE="text" name="count" value="1" class="form-control form-number">
@@ -118,7 +118,7 @@
                         </td>
                     @else
                         <td style="border: 1px solid #6b7fe3">
-                            <form style="max-height: 30px; min-width: 100px; display:flex; flex-direction: row">
+                            <form style="max-height: 30px; min-width: 150px; display:flex; flex-direction: row">
             <span class="input-number">
                 <input id="amount{{$loop->iteration}}" ENGINE="text" name="count" value="1" class="form-control form-number">
                 <!-- <div class="btn-count btn-count-plus" value="+" onClick="change('amount{{$loop->iteration}}', 1, 100, 1);">+</div>
