@@ -40,7 +40,7 @@
             </thead>
             <tbody>
             @foreach ($items as $item)
-                <tr class="table-orders__item">
+                <tr>
                     <td style=" border:1px solid #6b7fe3">
                         {{ $loop->iteration }}
                     </td>
