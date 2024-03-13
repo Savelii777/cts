@@ -14022,10 +14022,15 @@ p {
     width: 100% !important;
   }
 
+  .card-body {
+    width: 100% !important;
+  }
+
   .table-page1 {
     width: 100% !important;
     display: flex !important;
     flex-direction: column !important;
+    overflow: auto;
   }
 
   .shopping-cart-wrapper {
