@@ -46,7 +46,7 @@
                     <td style=" border:1px solid #6b7fe3">
                         {{ $loop->iteration }}
                     </td>
-                    <td style="width: 70%;  border:1px solid #6b7fe3;">
+                    <td style="width: 60%;  border:1px solid #6b7fe3;">
                         {{ $item->name }}
                     </td>
                     <td style="max-width: 200px; border: 1px solid #6b7fe3">
