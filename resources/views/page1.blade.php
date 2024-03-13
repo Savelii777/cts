@@ -110,8 +110,8 @@
                             <form style="max-height: 30px; min-width: 100px; display:flex; flex-direction: row">
             <span class="input-number">
                 <input id="amount{{$loop->iteration}}" ENGINE="text" name="count" value="1" class="form-control form-number">
-                <div class="btn-count btn-count-plus" value="+" onClick="change('amount{{$loop->iteration}}', 1, 100, 1);">+</div>
-                <div class="btn-count btn-count-minus" value="-" onClick="change('amount{{$loop->iteration}}', 1, 100, -1);">-</div>
+                <!-- <div class="btn-count btn-count-plus" value="+" onClick="change('amount{{$loop->iteration}}', 1, 100, 1);">+</div>
+                <div class="btn-count btn-count-minus" value="-" onClick="change('amount{{$loop->iteration}}', 1, 100, -1);">-</div> -->
             </span>
                                 <a rel="nofollow" onClick="updateJsonData('amount{{$loop->iteration}}',{{ $item->dealer }},'{{ $item->name }}')" class="btn-default"><img src="../images/addToCart.svg" alt=""></a>
                             </form>
@@ -121,8 +121,8 @@
                             <form style="max-height: 30px; min-width: 100px; display:flex; flex-direction: row">
             <span class="input-number">
                 <input id="amount{{$loop->iteration}}" ENGINE="text" name="count" value="1" class="form-control form-number">
-                <div class="btn-count btn-count-plus" value="+" onClick="change('amount{{$loop->iteration}}', 1, 100, 1);">+</div>
-                <div class="btn-count btn-count-minus" value="-" onClick="change('amount{{$loop->iteration}}', 1, 100, -1);">-</div>
+                <!-- <div class="btn-count btn-count-plus" value="+" onClick="change('amount{{$loop->iteration}}', 1, 100, 1);">+</div>
+                <div class="btn-count btn-count-minus" value="-" onClick="change('amount{{$loop->iteration}}', 1, 100, -1);">-</div> -->
             </span>
                                 <a rel="nofollow" onClick="updateJsonData('amount{{$loop->iteration}}',{{ $item->retail_price }},'{{ $item->name }}')" class="btn-default"><img src="../images/addToCart.svg" alt=""></a>
                             </form>
