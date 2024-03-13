@@ -14022,6 +14022,10 @@ p {
     width: 100% !important;
   }
 
+  .table__row {
+    width: 100% !important;
+  }
+
   .table-page1 {
     width: 100% !important;
     display: flex !important;
