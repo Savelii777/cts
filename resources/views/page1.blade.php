@@ -107,7 +107,7 @@
 
                     @if(Auth::check() && Auth::user()->hasRole('dealer'))
                         <td style="border: 1px solid #6b7fe3; min-width:100px">
-                            <form style="max-height: 30px; min-width: 100px">
+                            <form style="max-height: 30px; min-width: 100px; display:flex; flex-direction: row">
             <span class="input-number">
                 <input id="amount{{$loop->iteration}}" ENGINE="text" name="count" value="1" class="form-control form-number">
                 <div class="btn-count btn-count-plus" value="+" onClick="change('amount{{$loop->iteration}}', 1, 100, 1);">+</div>
@@ -118,7 +118,7 @@
                         </td>
                     @else
                         <td style="border: 1px solid #6b7fe3">
-                            <form style="max-height: 30px; min-width: 100px">
+                            <form style="max-height: 30px; min-width: 100px; display:flex; flex-direction: row">
             <span class="input-number">
                 <input id="amount{{$loop->iteration}}" ENGINE="text" name="count" value="1" class="form-control form-number">
                 <div class="btn-count btn-count-plus" value="+" onClick="change('amount{{$loop->iteration}}', 1, 100, 1);">+</div>
