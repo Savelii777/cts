@@ -188,7 +188,7 @@
             </h2>
 
             <div class="courses__block" style="display:flex; justify-content:center; align-items:center;">
-                <div class="shopping-cart-wrapper" style="min-width: 100%">
+                <div class="shopping-cart-wrapper" style="">
                     <table class="table is-fullwidth">
                         <thead>
                         <tr>
