@@ -14023,6 +14023,7 @@ p {
   }
 
   .table-page1 {
+    width: 100% !important;
     display: flex !important;
     flex-direction: column !important;
   }
