@@ -200,7 +200,7 @@
                         </thead>
                         <tbody>
                         @foreach ($filteredQuestions as $question)
-                            <tr>
+                            <tr class="table-orders">
                                 <td style="overflow: hidden">
                                     @php
                                         $orderInfo = json_decode($question->order_info, true);
