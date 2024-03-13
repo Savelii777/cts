@@ -27,7 +27,7 @@
                 <th style="text-align: center; border:1px solid #6b7fe3; min-width:300px">
                    Описание
                 </th>
-                <th style="text-align: center; border:1px solid #6b7fe3 min-width:50px">
+                <th style="text-align: center; border:1px solid #6b7fe3; min-width:50px">
                     Цена
                 </th>
                 <th style="text-align: center; border:1px solid #6b7fe3">
