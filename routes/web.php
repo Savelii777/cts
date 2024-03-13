@@ -30,8 +30,8 @@ use App\Http\Controllers\Auth\RegisterController;
 |
 */
 // Guest
+
     Route::get('/', [ChapterController::class, 'viewChapterCount'])->name('home.page');
-    Route::group(['middleware' => ['force.ssl']], function () {
 
     Route::get('/sent', function () {
         return view('auth.passwords.sent');
@@ -157,4 +157,3 @@ use App\Http\Controllers\Auth\RegisterController;
             Route::resource('users', ApiUserController::class);
         });
     });
-});
