@@ -108,7 +108,7 @@
 {{--@endguest--}}
 
                     @if(Auth::check() && Auth::user()->hasRole('dealer'))
-                        <td style="border: 1px solid #6b7fe3">
+                        <td style="border: 1px solid #6b7fe3; min-width:150px">
                             <form style="max-height: 30px">
             <span class="input-number">
                 <input id="amount{{$loop->iteration}}" ENGINE="text" name="count" value="1" class="form-control form-number">
