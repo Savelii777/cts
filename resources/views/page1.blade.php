@@ -15,15 +15,18 @@
 
     <div class="card-body p-0">
 
-        <table class="table table-striped projects">
+        <table class="table table-striped projects table-page1">
             <thead >
-            <tr>
+            <tr class="table__row">
                 <th style="text-align: center; border:1px solid #6b7fe3">
                     #
                 </th>
                 <th style="text-align: center; border:1px solid #6b7fe3;width: 70%; ">
                    Название
                 </th>
+            </tr>
+                <tr class="table__row">
+
                 <th style="text-align: center; border:1px solid #6b7fe3">
                    Описание
                 </th>
@@ -42,13 +45,16 @@
             </thead>
             <tbody>
             @foreach ($items as $item)
-                <tr>
+            <tr class="table__row">
                     <td style=" border:1px solid #6b7fe3">
                         {{ $loop->iteration }}
                     </td>
                     <td style="width: 70%;  border:1px solid #6b7fe3;">
                         {{ $item->name }}
                     </td>
+</tr>
+                    <tr class="table__row">
+
                     <td style="max-width: 200px; border: 1px solid #6b7fe3">
                     <details>
     <summary style="display:flex; flex-direction:row">

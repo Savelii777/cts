@@ -14022,6 +14022,11 @@ p {
   .card {
     width: 100% !important;
   }
+
+  .table-page1 {
+    display: flex !important;
+    flex-direction: column !important;
+  }
 }
 @media (max-width: 768px) {
   #person {
