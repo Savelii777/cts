@@ -14031,6 +14031,12 @@ p {
   }
 }
 @media (max-width: 768px) {
+  .table-orders {
+    display: flex !important;
+    width: 100% !important;
+    flex-direction: column !important;
+  }
+
   #person {
     margin-top: 200px;
   }

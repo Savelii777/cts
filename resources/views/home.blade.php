@@ -189,7 +189,7 @@
 
             <div class="courses__block" style="display:flex; justify-content:center; align-items:center;">
                 <div class="shopping-cart-wrapper" style="">
-                    <table class="table is-fullwidth">
+                    <table class="table table-orders is-fullwidth">
                         <thead>
                         <tr>
                             <th style="max-width:400px">Заказ</th>
