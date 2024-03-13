@@ -44,10 +44,7 @@
             <tbody>
             @foreach ($items as $item)
             <tr class="table__row">
-                    <td style="max-width:10%; border:1px solid #6b7fe3">
-                        {{ $loop->iteration }}
-                    </td>
-                    <td style="width: 90%;  border:1px solid #6b7fe3;">
+                    <td style="width: 100%;  border:1px solid #6b7fe3;">
                         {{ $item->name }}
                     </td>
 </tr>
