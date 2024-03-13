@@ -30,7 +30,7 @@ use App\Http\Controllers\Auth\RegisterController;
 |
 */
 // Guest
-
+Route::group(['middleware' => ['force.ssl']], function () {
     Route::get('/', [ChapterController::class, 'viewChapterCount'])->name('home.page');
 
     Route::get('/sent', function () {
@@ -157,3 +157,4 @@ use App\Http\Controllers\Auth\RegisterController;
             Route::resource('users', ApiUserController::class);
         });
     });
+});
