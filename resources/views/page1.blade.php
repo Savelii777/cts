@@ -21,19 +21,19 @@
                 <th style="text-align: center; border:1px solid #6b7fe3">
                     #
                 </th>
-                <th style="text-align: center; border:1px solid #6b7fe3;width: 70%; ">
+                <th style="text-align: center; border:1px solid #6b7fe3;min-width:650px">
                    Название
                 </th>
-                <th style="text-align: center; border:1px solid #6b7fe3">
+                <th style="text-align: center; border:1px solid #6b7fe3; min-width:300px">
                    Описание
                 </th>
-                <th style="text-align: center; border:1px solid #6b7fe3">
+                <th style="text-align: center; border:1px solid #6b7fe3 min-width:50px">
                     Цена
                 </th>
                 <th style="text-align: center; border:1px solid #6b7fe3">
                     Наличие
                 </th>
-                <th style="text-align: center; border:1px solid #6b7fe3;">
+                <th style="text-align: center; border:1px solid #6b7fe3; min-width:150px">
 
                 </th>
             </tr>
