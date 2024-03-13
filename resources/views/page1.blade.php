@@ -24,8 +24,6 @@
                 <th style="text-align: center; border:1px solid #6b7fe3;width: 70%; ">
                    Название
                 </th>
-            </tr>
-                <tr class="table__row">
 
                 <th style="text-align: center; border:1px solid #6b7fe3">
                    Описание

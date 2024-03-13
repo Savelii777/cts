@@ -14008,7 +14008,6 @@ p {
 }
 @media (max-width: 1000px) {
   #courses #app {
-    border: 1px solid red;
     width: 100% !important;
   }
 
