@@ -878,6 +878,11 @@ p {
 }
 @media (max-width: 768px) {
 
+  .table-orders__item{
+    max-width: 100% !important;
+    width: 100% !important;
+
+  }
 .table-orders{
   display: flex !important;
   width: 100% !important;

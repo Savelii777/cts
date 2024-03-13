@@ -201,7 +201,7 @@
                         <tbody>
                         @foreach ($filteredQuestions as $question)
                             <tr class="table-orders">
-                                <td style="overflow: hidden">
+                                <td class="table-orders__item" style="overflow: hidden">
                                     @php
                                         $orderInfo = json_decode($question->order_info, true);
                                         $totalPrice = 0;
@@ -216,13 +216,13 @@
                                     <p><strong>Итого: </strong>{{$totalPrice}} ₽</p>
 
                                 </td>
-                                <td style="max-width:100px">
+                                <td class="table-orders__item" style="max-width:100px">
                                     {{$question->created_at}}
                                 </td>
-                                <td style="color: {{ $question->is_ready === 'В работе' ? 'orange' : ($question->is_ready === 'Готов' ? 'green' : '') }}; max-width:100px">
+                                <td class="table-orders__item" style="color: {{ $question->is_ready === 'В работе' ? 'orange' : ($question->is_ready === 'Готов' ? 'green' : '') }}; max-width:100px">
                                     {{ $question->is_ready }}
                                 </td>
-                                <td>
+                                <td class="table-orders__item">
                                     <a href="{{ route('single-export-user', ['id' => $question->id]) }}" id="selectFile" class="btn btn-success" style="margin-right: 10px; color: #fff">
                                         <img src="/images/excel.png" width="16" height="16"> Скачать
                                     </a>
