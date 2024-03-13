@@ -17,14 +17,13 @@
 
         <table class="table table-striped projects table-page1">
             <thead >
-            <tr class="table__row">
+            <tr>
                 <th style="text-align: center; border:1px solid #6b7fe3">
                     #
                 </th>
                 <th style="text-align: center; border:1px solid #6b7fe3;width: 70%; ">
                    Название
                 </th>
-
                 <th style="text-align: center; border:1px solid #6b7fe3">
                    Описание
                 </th>
@@ -43,16 +42,13 @@
             </thead>
             <tbody>
             @foreach ($items as $item)
-            <tr class="table__row">
-                    <td style="max-width:10%; border:1px solid #6b7fe3">
+                <tr>
+                    <td style=" border:1px solid #6b7fe3">
                         {{ $loop->iteration }}
                     </td>
-                    <td style="width: 90%;  border:1px solid #6b7fe3;">
+                    <td style="width: 70%;  border:1px solid #6b7fe3;">
                         {{ $item->name }}
                     </td>
-</tr>
-                    <tr class="table__row">
-
                     <td style="max-width: 200px; border: 1px solid #6b7fe3">
                     <details>
     <summary style="display:flex; flex-direction:row">
