@@ -14485,6 +14485,9 @@ button:focus {
   flex-basis: 25%;
 }
 @media all and (max-width: 767px) {
+  .responsive-table .responsive-table li {
+    width: 100%;
+  }
   .responsive-table .table-header {
     display: none;
   }
