@@ -7,7 +7,7 @@
 
 <!-- Default box -->
 <div class="card" style="width:83%">
-<form style="max-width:100%; height:40px; margin: 20px; border:1px solid #6b7fe3; border-radius:5px" action="{{ str_replace('http', 'https', request()->fullUrlWithQuery()) }}" method="GET">
+<form style="max-width:100%; height:40px; margin: 20px; border:1px solid #6b7fe3; border-radius:5px" action="{{ str_replace('http', 'https', request()->fullUrl()) }}" method="GET">
     <input  type="text" name="keyword" placeholder="Введите ключевые слова" style="width:100%; font-size:23px">
     <button style="position:absolute;top:20px;right:20px;height:39px;border:1px solid #6b7fe3;border-radius:5px" type="submit">Поиск</button>
 </form>
