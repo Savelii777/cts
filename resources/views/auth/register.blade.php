@@ -14,13 +14,13 @@
   <form class="form-glass" style="height: 620px" method="POST" action="{{ route('register') }}">
   @csrf
     <p>Регистрация</p>
-    <input  id="name" type="text" class=" @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" placeholder="{{ __('ФИО*') }}" required autocomplete="name" autofocus><br>
+    <input  id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" placeholder="{{ __('ФИО*') }}" required autocomplete="name" autofocus><br>
     @error('name')
                             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                             @enderror
-                            <input  id="login" type="text" class="@error('login') is-invalid @enderror" name="login" value="{{ old('login') }}" placeholder="{{ __('Логин*') }}" required autocomplete="login" autofocus><br>
+                            <input  id="login" type="text" class="form-control @error('login') is-invalid @enderror" name="login" value="{{ old('login') }}" placeholder="{{ __('Логин*') }}" required autocomplete="login" autofocus><br>
                             @error('login')
                             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
