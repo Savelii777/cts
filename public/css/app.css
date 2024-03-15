@@ -14488,6 +14488,9 @@ button:focus {
   .responsive-table .responsive-table li {
     width: 100%;
   }
+  .responsive-table .responsive-table li div {
+    width: 100%;
+  }
   .responsive-table .table-header {
     display: none;
   }

@@ -1350,9 +1350,9 @@ button:focus {
   @media all and (max-width: 767px) {
     .responsive-table {
       li {
-        width: 100%;
+        width: 100% !important;
         div{
-          width: 100%;
+          width: 100% !important;
         }
       }
     }
