@@ -14496,7 +14496,6 @@ button:focus {
     width: 100%;
   }
   .responsive-table .col {
-    display: flex;
     padding: 10px 0;
   }
   .responsive-table .col:before {
