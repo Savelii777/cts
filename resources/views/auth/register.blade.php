@@ -2,13 +2,13 @@
 
 @section('content')
     @include('partials.header')
-    <section id="entrance" class="account" style="height: 1100px">
+    <section id="entrance" class="account" style="height: 900px">
     @if (session('success'))
 <div class="alert alert-success text-center">
     <h1>Операция выполнена успешно!</h1>
 </div>
 @endif
-        <div class="container-form-glass" id="app" style="display: flex; flex-direction: column;   font-family: sans-serif; font-weight: bold">
+        <div class="container-form-glass-reg" id="app" style="display: flex; flex-direction: column;   font-family: sans-serif; font-weight: bold">
             
         <div class="container-form-glass">
   <form class="form-glass" style="height: 620px" method="POST" action="{{ route('register') }}">

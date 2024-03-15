@@ -14188,14 +14188,11 @@ span {
 
 .container-form {
   height: 100%;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
 }
 
 .account {
   height: 100%;
+  overflow: hidden;
 }
 
 .container-form-glass {
@@ -14203,6 +14200,12 @@ span {
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
+}
+
+.container-form-glass-reg {
+  position: absolute;
+  top: 100px;
+  left: 15%;
 }
 
 .form-glass {
