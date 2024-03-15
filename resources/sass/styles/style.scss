@@ -1358,20 +1358,18 @@ button:focus {
       display: block;
     }
     .col {
-      
       flex-basis: 100%;
       width: 100%;
     }
-    // .col {
-    //   display: flex;
-    //   padding: 10px 0;
-    //   &:before {
-    //     color: #6C7A89;
-    //     padding-right: 10px;
-    //     content: attr(data-label);
-    //     flex-basis: 50%;
-    //     text-align: left;
-    //   }
-    // }
+    .col {
+      padding: 10px 0;
+      &:before {
+        color: #6C7A89;
+        padding-right: 10px;
+        content: attr(data-label);
+        flex-basis: 50%;
+        text-align: left;
+      }
+    }
   }
 }
