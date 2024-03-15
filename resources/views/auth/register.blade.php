@@ -2,14 +2,64 @@
 
 @section('content')
     @include('partials.header')
-    <section id="entrance" class="account">
+    <section id="entrance" class="account" style="height: 1100px">
     @if (session('success'))
 <div class="alert alert-success text-center">
     <h1>Операция выполнена успешно!</h1>
 </div>
 @endif
-        <div class="container" id="app" style="display: flex; flex-direction: column;   font-family: sans-serif; font-weight: bold">
-            <div class="entrance__block">
+        <div class="container-form-glass" id="app" style="display: flex; flex-direction: column;   font-family: sans-serif; font-weight: bold">
+            
+        <div class="container-form-glass">
+  <form class="form-glass" style="height: 620px" method="POST" action="{{ route('register') }}">
+  @csrf
+    <p>Регистрация</p>
+    <input  id="name" type="text" class=" @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" placeholder="{{ __('ФИО*') }}" required autocomplete="name" autofocus><br>
+    @error('name')
+                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                            @enderror
+                            <input  id="login" type="text" class="@error('login') is-invalid @enderror" name="login" value="{{ old('login') }}" placeholder="{{ __('Логин*') }}" required autocomplete="login" autofocus><br>
+                            @error('login')
+                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                            @enderror
+                            <input id="phone_number" type="text" class="form-control @error('phone_number') is-invalid @enderror" name="phone_number" placeholder="{{ __('Телефон*') }}" value="{{ old('phone_number') }}" required autocomplete="phone_number" autofocus>
+                            @error('phone_number')
+                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                            @enderror
+                            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="{{ __('Почта') }}" value="{{ old('email') }}" autocomplete="email">
+                            @error('email')
+                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                            @enderror
+                            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror"  placeholder="{{ __('Пароль*') }}" name="password" required autocomplete="new-password">
+                            @error('password')
+                            <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                            @enderror
+                            <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="{{ __('Повторите пароль*') }}" required autocomplete="new-password">
+
+    
+    <button class="button-glass" type="submit" value="Регистрация">Регистрация</button><br>
+  </form>
+
+  <div class="drops">
+    <div class="drop drop-1"></div>
+    <div class="drop drop-2"></div>
+    <div class="drop drop-3"></div>
+    <div class="drop drop-4"></div>
+    <div class="drop drop-5"></div>
+  </div>
+</div>
+        
+        <!-- <div class="entrance__block">
                 <form method="POST" action="{{ route('register') }}" style=" display: flex; flex-direction: column; justify-content: center; align-items: center">
                     @csrf
 
@@ -38,8 +88,8 @@
                                     </span>
                             @enderror
                         </div>
-                    </div>
-                    <div class="form-group row" style="display: flex; flex-direction: column">
+                    </div> -->
+                    <!-- <div class="form-group row" style="display: flex; flex-direction: column">
                         <label for="phone_number" class="col-md-4 col-form-label text-md-right">{{ __('Телефон*') }}</label>
 
                         <div class="">
@@ -51,61 +101,8 @@
                                     </span>
                             @enderror
                         </div>
-                    </div>
-{{--                    <div class="form-group row" style="display: flex; flex-direction: column">--}}
-{{--                        <label for="city" class="col-md-4 col-form-label text-md-right">{{ __('Город') }}</label>--}}
-
-{{--                        <div class="">--}}
-{{--                            <input id="city" type="text" class="form-control @error('city') is-invalid @enderror" name="city" value="{{ old('city') }}" autocomplete="city" autofocus>--}}
-
-{{--                            @error('city')--}}
-{{--                            <span class="invalid-feedback" role="alert">--}}
-{{--                                        <strong>{{ $message }}</strong>--}}
-{{--                                    </span>--}}
-{{--                            @enderror--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                    <div class="form-group row" style="display: flex; flex-direction: column">--}}
-{{--                        <label for="birth" class="col-md-4 col-form-label text-md-right">{{ __('Дата рождения') }}</label>--}}
-
-{{--                        <div class="">--}}
-{{--                            <input id="birth" type="text" class="form-control @error('birth') is-invalid @enderror" name="birth" value="{{ old('birth') }}" autocomplete="birth" autofocus>--}}
-
-{{--                            @error('birth')--}}
-{{--                            <span class="invalid-feedback" role="alert">--}}
-{{--                                        <strong>{{ $message }}</strong>--}}
-{{--                                    </span>--}}
-{{--                            @enderror--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                    <div class="form-group row" style="display: flex; flex-direction: column">--}}
-{{--                        <label for="sex" class="col-md-4 col-form-label text-md-right">{{ __('Пол') }}</label>--}}
-
-{{--                        <div class="">--}}
-{{--                            <input id="sex" type="text" class="form-control @error('sex') is-invalid @enderror" name="sex" value="{{ old('sex') }}" autocomplete="sex" autofocus>--}}
-
-{{--                            @error('sex')--}}
-{{--                            <span class="invalid-feedback" role="alert">--}}
-{{--                                        <strong>{{ $message }}</strong>--}}
-{{--                                    </span>--}}
-{{--                            @enderror--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                    <div class="form-group row" style="display: flex; flex-direction: column">--}}
-{{--                        <label for="place_of_work" class="col-md-4 col-form-label text-md-right">{{ __('Место работы') }}</label>--}}
-
-{{--                        <div class="">--}}
-{{--                            <input id="place_of_work" type="text" class="form-control @error('place_of_work') is-invalid @enderror" name="place_of_work" value="{{ old('place_of_work') }}" autocomplete="place_of_work" autofocus>--}}
-
-{{--                            @error('place_of_work')--}}
-{{--                            <span class="invalid-feedback" role="alert">--}}
-{{--                                        <strong>{{ $message }}</strong>--}}
-{{--                                    </span>--}}
-{{--                            @enderror--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-
-                    <div class="form-group row" style="display: flex; flex-direction: column">
+                    </div>               -->
+                    <!-- <div class="form-group row" style="display: flex; flex-direction: column">
                         <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Почта') }}</label>
 
                         <div class="">
@@ -117,9 +114,9 @@
                                     </span>
                             @enderror
                         </div>
-                    </div>
+                    </div> -->
 
-                    <div class="form-group row" style="display: flex; flex-direction: column">
+                    <!-- <div class="form-group row" style="display: flex; flex-direction: column">
                         <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Пароль*') }}</label>
 
                         <div class="">
@@ -131,9 +128,9 @@
                                     </span>
                             @enderror
                         </div>
-                    </div>
+                    </div> -->
 
-                    <div class="form-group row" style="display: flex; flex-direction: column">
+                    <!-- <div class="form-group row" style="display: flex; flex-direction: column">
                         <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Повторите пароль*') }}</label>
 
                         <div class="">
@@ -149,7 +146,7 @@
                         </div>
                     </div>
                 </form>
-            </div>
+            </div> -->
         </div>
     </section>
     @include('partials.footer')

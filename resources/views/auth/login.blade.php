@@ -3,12 +3,50 @@
 @section('content')
 @include('partials.header')
 <section id="entrance" class="account">
-    <div class="container" id="app">
+    <div class="container-form" id="app">
     @if (session('success'))
 <div class="alert alert-success text-center">
     <h1>Операция выполнена успешно!</h1>
 </div>
 @endif
+
+<div class="container-form-glass">
+  <form class="form-glass" method="POST" action="{{ route('login') }}">
+  @csrf
+    <p>Вход</p>
+    <input  id="login" type="text" placeholder="Логин" class="input-glass form-control @error('login') is-invalid @enderror" name="login" value="{{ old('login') }}" required autocomplete="login" autofocus><br>
+    @error('login')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+    @enderror
+    <input id="password" type="password" class="input-glass form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password"><br>
+    @error('password')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+    @enderror
+    <button class="button-glass" type="submit" value="Войти">Войти</button><br>
+    <a href="/register">Регистрация</a>
+        @if (Route::has('password.request'))
+        <a href="{{ route('password.request') }}">
+            Восстановить пароль?
+        </a>
+        @endif
+  </form>
+
+  <div class="drops">
+    <div class="drop drop-1"></div>
+    <div class="drop drop-2"></div>
+    <div class="drop drop-3"></div>
+    <div class="drop drop-4"></div>
+    <div class="drop drop-5"></div>
+  </div>
+</div>
+
+
+
+<!-- 
     <div class="entrance__block">
 
     <form method="POST" action="{{ route('login') }}" class="auth-block">
@@ -49,7 +87,7 @@
     </div>
 </form>
 
-          </div>
+          </div> -->
     </div>
  </section>
  @include('partials.footer')
