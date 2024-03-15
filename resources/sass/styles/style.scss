@@ -1291,7 +1291,11 @@ button:focus {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-   top: 120px;
+   top: 115px;
    width:100%;
+    li {
+    font-size: 16px;
+		padding: 10px 16px;
+    }
   }
 }
