@@ -14,37 +14,37 @@
   <form class="form-glass" style="height: 620px" method="POST" action="{{ route('register') }}">
   @csrf
     <p>Регистрация</p>
-    <input  id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" placeholder="{{ __('ФИО*') }}" required autocomplete="name" autofocus><br>
+    <input  id="name" type="text" class=" @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" placeholder="{{ __('ФИО*') }}" required autocomplete="name" autofocus><br>
     @error('name')
                             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                             @enderror
-                            <input  id="login" type="text" class="form-control @error('login') is-invalid @enderror" name="login" value="{{ old('login') }}" placeholder="{{ __('Логин*') }}" required autocomplete="login" autofocus><br>
+                            <input  id="login" type="text" class=" @error('login') is-invalid @enderror" name="login" value="{{ old('login') }}" placeholder="{{ __('Логин*') }}" required autocomplete="login" autofocus><br>
                             @error('login')
                             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                             @enderror
-                            <input id="phone_number" type="text" class="form-control @error('phone_number') is-invalid @enderror" name="phone_number" placeholder="{{ __('Телефон*') }}" value="{{ old('phone_number') }}" required autocomplete="phone_number" autofocus>
+                            <input id="phone_number" type="text" class=" @error('phone_number') is-invalid @enderror" name="phone_number" placeholder="{{ __('Телефон*') }}" value="{{ old('phone_number') }}" required autocomplete="phone_number" autofocus>
                             @error('phone_number')
                             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                             @enderror
-                            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="{{ __('Почта') }}" value="{{ old('email') }}" autocomplete="email">
+                            <input id="email" type="email" class=" @error('email') is-invalid @enderror" name="email" placeholder="{{ __('Почта') }}" value="{{ old('email') }}" autocomplete="email">
                             @error('email')
                             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                             @enderror
-                            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror"  placeholder="{{ __('Пароль*') }}" name="password" required autocomplete="new-password">
+                            <input id="password" type="password" class=" @error('password') is-invalid @enderror"  placeholder="{{ __('Пароль*') }}" name="password" required autocomplete="new-password">
                             @error('password')
                             <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                             @enderror
-                            <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="{{ __('Повторите пароль*') }}" required autocomplete="new-password">
+                            <input id="password-confirm" type="password" class="" name="password_confirmation" placeholder="{{ __('Повторите пароль*') }}" required autocomplete="new-password">
 
     
     <button class="button-glass" type="submit" value="Регистрация">Регистрация</button><br>
