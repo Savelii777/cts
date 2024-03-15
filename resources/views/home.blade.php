@@ -152,7 +152,7 @@
         </div>
     </section>
     <section id="courses" style="display: flex; flex-direction: row; padding-left: 100px;padding-right: 100px;">
-        <div class="container" id="app" style="max-width: 850px">
+        <div class="container" id="app" style="max-width: 850px; margin-top:30px">
             <h2 style="color:#fff">
                Корзина покупок
             </h2>
