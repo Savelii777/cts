@@ -13,7 +13,7 @@
       <h1 class="first__title">
 ООО "КОПИРТЕХСЕРВИС"
       </h1>
-       <form name="search-form" class="search__container"  action="{{ str_replace('http', 'https', request()->fullUrl()) }}" method="GET">
+       <form name="search-form" class="search__container"  action="/general" method="GET">
            <p class="search__title">
                Введите ключевые слова           </p>
            <input class="search__input" type="text" name="keyword" placeholder="Поиск">
