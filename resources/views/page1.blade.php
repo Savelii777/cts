@@ -1,7 +1,7 @@
 @extends('layouts.main_layout')
 @section('content')
     @include('partials.header')
-    <section id="person" style="display:flex; justify-content:center; align-items:center; flex-diraction: row; width: 100%;padding:0; padding-top:50px; padding-bottom:50px">
+    <section id="person" style="display:flex; justify-content:center; align-items:center; flex-diraction: row; width: 100%;padding:0; padding-top:50px; padding-bottom:50px; background-color: #fff !important;">
 
     <div class="content" style="display:flex; justify-content:center; align-items:center;width:100%; overflow: hidden;">
 
