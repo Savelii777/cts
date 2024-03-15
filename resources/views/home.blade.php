@@ -1,7 +1,7 @@
 @extends('layouts.main_layout')
 @section('content')
     @include('partials.header')
-    <section id="person">
+    <section id="person" style="background: rgba(107, 127, 227, 0.8)">
         <div class="container">
             <div class="row">
                 <div class="col-lg-2 col-4">
@@ -151,7 +151,7 @@
             </div>
         </div>
     </section>
-    <section id="courses" style="display: flex; flex-direction: row; padding-left: 100px;padding-right: 100px;">
+    <section id="courses" style="display: flex; flex-direction: row; padding-left: 100px;padding-right: 100px; background: rgba(107, 127, 227, 0.8)">
         <div class="container" id="app" style="max-width: 850px; margin-top:30px">
             <h2 style="color:#fff">
                Корзина покупок
