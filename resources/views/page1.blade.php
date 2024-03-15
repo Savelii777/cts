@@ -15,6 +15,78 @@
 
     <div class="card-body p-0">
 
+    <ul class="responsive-table">
+    <li class="table-header">
+      <div class="col col-1">№</div>
+      <div class="col col-2">Название</div>
+      <div class="col col-1">Описание</div>
+      <div class="col col-1">Цена</div>
+      <div class="col col-1">Наличие</div>
+      <div class="col col-1"></div>
+    </li>
+    @foreach ($items as $item)
+                <li>
+                    <div class="col col-1">
+                        {{ $loop->iteration }}
+                    </div>
+                    <div class="col col-2">
+                        {{ $item->name }}
+                    </div>
+                    <div class="col col-1">
+                    <details>
+    <summary style="display:flex; flex-direction:row">
+      <div class="button-popup">
+      </div>
+      <div class="details-modal-overlay"></div>
+      <summary style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">{{ $item->description }}</summary>
+    </summary>
+    <div class="details-modal">
+      <div class="details-modal-content">
+        <p>
+        {{ $item->description }}
+        </p>
+      </div>
+    </div>
+  </details>
+                    </div>
+
+                    <div class="col col-1">
+                    @if ($isDealer)
+                        {{ $item->dealer }}
+                    @else
+                        {{ $item->retail_price }}
+                    @endif
+                    </div>
+
+                    <div style=" color: {{ $item->availability == 'Нет' ? 'red' : ($item->availability == 'Есть' ? 'green' : '#b0c42f') }};" class="col col-1">
+                    {{ $item->availability }}
+                </div>
+
+                    @if(Auth::check() && Auth::user()->hasRole('dealer'))
+                        <div class="col col-1">
+                            <form style="max-height: 30px; min-width: 100px; display:flex; flex-direction: row">
+            <span class="input-number">
+                <input id="amount{{$loop->iteration}}" ENGINE="text" name="count" value="1" class="form-control form-number">
+                
+            </span>
+                                <a rel="nofollow" onClick="updateJsonData('amount{{$loop->iteration}}',{{ $item->dealer }},'{{ $item->name }}')" class="btn-default"><img src="../images/addToCart.svg" alt=""></a>
+                            </form>
+                        </div>
+                    @else
+                        <div class="col col-1">
+                            <form style="max-height: 30px; min-width: 150px; display:flex; flex-direction: row">
+            <span class="input-number">
+                <input id="amount{{$loop->iteration}}" ENGINE="text" name="count" value="1" class="form-control form-number">
+               
+            </span>
+                                <a rel="nofollow" onClick="updateJsonData('amount{{$loop->iteration}}',{{ $item->retail_price }},'{{ $item->name }}')" class="btn-default"><img src="../images/addToCart.svg" alt=""></a>
+                            </form>
+                        </div>
+                    @endif
+</li>
+            @endforeach
+  </ul>
+<!-- 
         <table class="table table-striped projects table-page1">
             <thead >
             <tr>
@@ -63,11 +135,6 @@
       </div>
     </div>
   </details>
-
-                        <!-- <details>
-  <summary style="max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">{{ $item->description }}</summary>
-  <p>{{ $item->description }}</p>
-</details> -->
                     </td>
 
                     <td style="min-width: 50px; max-width:100px; border:1px solid #6b7fe3">
@@ -81,37 +148,13 @@
                     <td style="min-width: 50px; max-width:100px; color: {{ $item->availability == 'Нет' ? 'red' : ($item->availability == 'Есть' ? 'green' : '#b0c42f') }};  border:1px solid #6b7fe3">
                     {{ $item->availability }}
                 </td>
-{{--@guest--}}
-
-{{--    <td style="border:1px solid #6b7fe3"><form style="max-height:30px">--}}
-{{--    <span class="input-number">--}}
-{{--    <input id="amount{{$loop->iteration}}" ENGINE="text" name="count" value="1" class="form-control form-number ">--}}
-{{--    <div class="btn-count btn-count-plus" value="+" onClick="change('amount{{$loop->iteration}}',1,100, 1);">+</div>--}}
-{{--    <div class="btn-count btn-count-minus" value="-" onClick="change('amount{{$loop->iteration}}',1,100,-1);">-</div>--}}
-{{--    </span>--}}
-{{--    <a rel="nofollow" href="{{ route('login') }}" class="btn-default"><img src="../images/addToCart.svg" alt=""></a>--}}
-{{--    </form></td>--}}
-
-{{--@else--}}
-
-{{--    <td style="border:1px solid #6b7fe3"><form style="max-height:30px">--}}
-{{--    <span class="input-number">--}}
-{{--    <input id="amount{{$loop->iteration}}" ENGINE="text" name="count" value="1" class="form-control form-number">--}}
-{{--    <div class="btn-count btn-count-plus" value="+" onClick="change('amount{{$loop->iteration}}',1,100, 1);">+</div>--}}
-{{--    <div class="btn-count btn-count-minus" value="-" onClick="change('amount{{$loop->iteration}}',1,100,-1);">-</div>--}}
-{{--    </span>--}}
-{{--    <a rel="nofollow" onClick="updateJsonData('amount{{$loop->iteration}}',{{ $item->retail_price }},'{{ $item->name }}')" class="btn-default"><img src="../images/addToCart.svg" alt=""></a>--}}
-{{--    </form></td>--}}
-
-{{--@endguest--}}
 
                     @if(Auth::check() && Auth::user()->hasRole('dealer'))
                         <td style="border: 1px solid #6b7fe3; min-width:150px">
                             <form style="max-height: 30px; min-width: 100px; display:flex; flex-direction: row">
             <span class="input-number">
                 <input id="amount{{$loop->iteration}}" ENGINE="text" name="count" value="1" class="form-control form-number">
-                <!-- <div class="btn-count btn-count-plus" value="+" onClick="change('amount{{$loop->iteration}}', 1, 100, 1);">+</div>
-                <div class="btn-count btn-count-minus" value="-" onClick="change('amount{{$loop->iteration}}', 1, 100, -1);">-</div> -->
+                
             </span>
                                 <a rel="nofollow" onClick="updateJsonData('amount{{$loop->iteration}}',{{ $item->dealer }},'{{ $item->name }}')" class="btn-default"><img src="../images/addToCart.svg" alt=""></a>
                             </form>
@@ -121,8 +164,7 @@
                             <form style="max-height: 30px; min-width: 150px; display:flex; flex-direction: row">
             <span class="input-number">
                 <input id="amount{{$loop->iteration}}" ENGINE="text" name="count" value="1" class="form-control form-number">
-                <!-- <div class="btn-count btn-count-plus" value="+" onClick="change('amount{{$loop->iteration}}', 1, 100, 1);">+</div>
-                <div class="btn-count btn-count-minus" value="-" onClick="change('amount{{$loop->iteration}}', 1, 100, -1);">-</div> -->
+               
             </span>
                                 <a rel="nofollow" onClick="updateJsonData('amount{{$loop->iteration}}',{{ $item->retail_price }},'{{ $item->name }}')" class="btn-default"><img src="../images/addToCart.svg" alt=""></a>
                             </form>
@@ -131,9 +173,8 @@
                 </tr>
             @endforeach
             </tbody>
-        </table>
+        </table> -->
     </div>
-    <!-- /.card-body -->
 </div>
 
 </div>

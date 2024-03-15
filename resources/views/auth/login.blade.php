@@ -14,13 +14,13 @@
   <form class="form-glass" method="POST" action="{{ route('login') }}">
   @csrf
     <p>Вход</p>
-    <input  id="login" type="text" placeholder="Логин" class="input-glass form-control @error('login') is-invalid @enderror" name="login" value="{{ old('login') }}" required autocomplete="login" autofocus><br>
+    <input  id="login" type="text" placeholder="Логин" class="input-glass  @error('login') is-invalid @enderror" name="login" value="{{ old('login') }}" required autocomplete="login" autofocus><br>
     @error('login')
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
             </span>
     @enderror
-    <input id="password" placeholder="Пароль" type="password" class="input-glass form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password"><br>
+    <input id="password" placeholder="Пароль" type="password" class="input-glass  @error('password') is-invalid @enderror" name="password" required autocomplete="current-password"><br>
     @error('password')
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>

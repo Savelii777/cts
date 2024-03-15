@@ -11,7 +11,7 @@
         <div class="container-form-glass-reg" id="app" style="display: flex; flex-direction: column;   font-family: sans-serif; font-weight: bold">
             
         <div class="container-form-glass">
-  <form class="form-glass" style="height: 600px;" method="POST" action="{{ route('register') }}">
+  <form class="form-glass" style="height: 620px;" method="POST" action="{{ route('register') }}">
   @csrf
     <p>Регистрация</p>
     <input  id="name" type="text" class=" @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" placeholder="{{ __('ФИО*') }}" required autocomplete="name" autofocus><br>

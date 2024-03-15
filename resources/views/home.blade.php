@@ -157,7 +157,7 @@
                Корзина покупок
             </h2>
 
-            <div class="courses__block" style="display:flex; justify-content:center; align-items:center;">
+            <div class="courses__block" style="display:flex; justify-content:center; align-items:center; padding: 4px">
             <div class="shopping-cart-wrapper" style="min-width: 100%">
   <table class="table is-fullwidth shopping-cart">
     <thead>
@@ -182,12 +182,12 @@
 
             </div>
         </div>
-        <div class="container" id="app" style="max-width: 850px">
+        <div class="container" id="app" style="max-width: 850px; margin-top:30px">
             <h2 style="color:#fff">
                 История заказов
             </h2>
 
-            <div class="courses__block" style="display:flex; justify-content:center; align-items:center;">
+            <div class="courses__block" style="display:flex; justify-content:center; align-items:center; padding:0; margin-bottom:20px">
                 <div class="shopping-cart-wrapper" style="">
                     <table class="table table-orders is-fullwidth">
                         <thead>
