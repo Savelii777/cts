@@ -1074,6 +1074,10 @@ $white: rgba(255,255,255,0.3);
   text-align: center;
   position: relative;
   transition: all 0.2s ease-in-out;
+
+  input::placeholder{
+    color: #fff;
+  }
   
   p {
     font-weight: 500;

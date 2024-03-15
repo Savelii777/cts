@@ -20,7 +20,7 @@
                 <strong>{{ $message }}</strong>
             </span>
     @enderror
-    <input id="password" type="password" class="input-glass form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password"><br>
+    <input id="password" placeholder="Пароль" type="password" class="input-glass form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password"><br>
     @error('password')
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>

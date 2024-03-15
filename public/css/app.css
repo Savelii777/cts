@@ -14223,6 +14223,12 @@ span {
   position: relative;
   transition: all 0.2s ease-in-out;
 }
+.form-glass input::-moz-placeholder {
+  color: #fff;
+}
+.form-glass input::placeholder {
+  color: #fff;
+}
 .form-glass p {
   font-weight: 500;
   color: #fff;
