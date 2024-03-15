@@ -52,7 +52,6 @@ class ItemController extends Controller
         $user = Auth::user();
         $dealers = User::role('dealer')->get();
         $keyword = $request->input('keyword');
-        dd($request);
         $items = Store::query();
 
         if ($keyword) {
